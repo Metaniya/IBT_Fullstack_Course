@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2 - Box Sizing</title>
+    <style>
+        /* content-box (default): width 300px + padding 24px*2 + border 2px*2
+           rendered width = 300 + 48 + 4 = 352px */
+        .card-content-box {
+            box-sizing: content-box;
+            width: 300px;
+            padding: 24px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        /* border-box: padding and border are included INSIDE the 300px,
+           so rendered width stays exactly 300px */
+        .card-border-box {
+            box-sizing: border-box;
+            width: 300px;
+            padding: 24px;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-content-box">
+        This card uses content-box. Its actual rendered width is
+        300 + 24 + 24 + 2 + 2 = 352px, even though width is set to 300px.
+    </div>
+
+    <div class="card-border-box">
+        This card uses border-box. Its rendered width is exactly 300px,
+        because padding and border are included inside that 300px.
+    </div>
+</body>
+</html>

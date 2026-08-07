@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Fixes</title>
+</head>
+<body>
+    <h1>Fixing Inaccessible Markup</h1>
+
+    <h2>1. Div used as a button</h2>
+    <!-- BEFORE (inaccessible):
+    <div onclick="submitOrder()">Submit Order</div>
+    A div is not focusable and screen readers won't announce it as clickable. -->
+
+    <!-- AFTER (fixed): -->
+    <button type="button" onclick="submitOrder()">Submit Order</button>
+    <!-- Fix gives: keyboard users can Tab to it and press Enter/Space to
+         activate it, and screen readers announce it as a "button". -->
+
+    <h2>2. Unlabelled input</h2>
+    <!-- BEFORE (inaccessible):
+    <input type="text" placeholder="Enter your city">
+    A placeholder disappears once typing starts and is not a real label,
+    so screen reader users don't reliably hear what the field is for. -->
+
+    <!-- AFTER (fixed): -->
+    <label for="city">City</label>
+    <input id="city" type="text" placeholder="Enter your city">
+    <!-- Fix gives: screen readers announce "City, edit text" when the
+         field is focused, even after the placeholder text is gone. -->
+
+    <h2>3. Image with no alt</h2>
+    <!-- BEFORE (inaccessible):
+    <img src="coffee-cup.jpg">
+    Screen readers either skip it silently or read the raw filename,
+    giving no useful information. -->
+
+    <!-- AFTER (fixed): -->
+    <img src="coffee-cup.jpg" alt="A traditional Ethiopian coffee cup filled with fresh coffee">
+    <!-- Fix gives: screen reader users hear a meaningful description
+         of the image instead of nothing or a filename. -->
+
+</body>
+</html>

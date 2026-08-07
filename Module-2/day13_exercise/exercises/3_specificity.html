@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3 - Specificity</title>
+    <style>
+        /* Element selector - specificity score: 0,0,1 */
+        p {
+            color: blue;
+        }
+
+        /* Class selector - specificity score: 0,1,0 */
+        .note {
+            color: green;
+        }
+
+        /* ID selector - specificity score: 1,0,0 */
+        #important {
+            color: red;
+        }
+
+        /*
+            Prediction: the paragraph will be RED.
+
+            Specificity is compared in the order (ID, class, element).
+            ID selectors (1,0,0) always beat class selectors (0,1,0),
+            which always beat element selectors (0,0,1), no matter
+            what order the rules appear in the stylesheet.
+
+            #important (1,0,0) > .note (0,1,0) > p (0,0,1)
+            so the ID rule wins and the text is red.
+        */
+    </style>
+</head>
+<body>
+    <p class="note" id="important">
+        This paragraph is targeted by an element rule, a class rule, and an ID rule.
+        The ID rule wins because it has the highest specificity.
+    </p>
+</body>
+</html>

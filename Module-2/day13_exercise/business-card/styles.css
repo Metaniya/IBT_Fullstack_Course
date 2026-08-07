@@ -1,0 +1,91 @@
+
+:root {
+    --brand: hsl(212, 68%, 33%);
+    --brand-hover: hsl(212, 68%, 45%);
+    --text-dark: hsl(0, 0%, 20%);
+    --text-muted: hsl(0, 0%, 40%);
+    --bg-light: hsl(36, 40%, 97%);
+    --border-color: hsl(214, 32%, 91%);
+
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.card {
+    max-width: 360px;
+    margin: 60px auto;
+    padding: var(--space-lg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: white;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.card::before {
+    content: "";
+    display: block;
+    height: 6px;
+    width: 60px;
+    background-color: var(--brand);
+    border-radius: 3px;
+    margin-bottom: var(--space-md);
+}
+
+.business-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--text-dark);
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--brand);
+    margin-bottom: var(--space-md);
+}
+
+.body-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.contact-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.btn {
+    background-color: var(--brand);
+    color: white;
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hover changes only the lightness, keeping hue and saturation the same */
+.btn:hover {
+    background-color: var(--brand-hover);
+}

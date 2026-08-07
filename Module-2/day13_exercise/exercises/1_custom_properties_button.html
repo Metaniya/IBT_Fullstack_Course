@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1 - Custom Properties Button</title>
+    <style>
+        :root {
+            --primary-color: #7b3f00;
+            --secondary-color: #f0e6d6;
+            --base-spacing: 16px;
+            --font-stack: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            padding: var(--base-spacing);
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-family: var(--font-stack);
+            padding: var(--base-spacing);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Click Me</button>
+</body>
+</html>

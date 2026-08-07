@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - Color Conversion</title>
+    <style>
+        /*
+            Original hex palette:
+            #7B3F00 (brown)
+            #2E7D32 (green)
+            #1565C0 (blue)
+
+            Converted to rgb():
+            #7B3F00 -> rgb(123, 63, 0)
+            #2E7D32 -> rgb(46, 125, 50)
+            #1565C0 -> rgb(21, 101, 192)
+
+            Converted to hsl() with a lighter hover shade
+            (same hue and saturation, only lightness increased):
+        */
+
+        :root {
+            --brown: hsl(30, 100%, 24%);
+            --brown-hover: hsl(30, 100%, 40%);
+
+            --green: hsl(122, 46%, 34%);
+            --green-hover: hsl(122, 46%, 50%);
+
+            --blue: hsl(210, 80%, 42%);
+            --blue-hover: hsl(210, 80%, 58%);
+        }
+
+        .swatch {
+            display: inline-block;
+            width: 150px;
+            height: 80px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        .brown { background-color: var(--brown); }
+        .brown:hover { background-color: var(--brown-hover); }
+
+        .green { background-color: var(--green); }
+        .green:hover { background-color: var(--green-hover); }
+
+        .blue { background-color: var(--blue); }
+        .blue:hover { background-color: var(--blue-hover); }
+    </style>
+</head>
+<body>
+    <div class="swatch brown">Brown</div>
+    <div class="swatch green">Green</div>
+    <div class="swatch blue">Blue</div>
+    <p>Hover over each swatch to see the lighter hsl() hover shade.</p>
+</body>
+</html>

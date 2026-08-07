@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations — Habesha Eatery, Addis Ababa</title>
+    <meta name="description" content="Reserve a table at Habesha Eatery, an authentic Ethiopian restaurant in Addis Ababa. View our menu and book online.">
+</head>
+<body>
+
+    <header>
+        <h1>Habesha Eatery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Reservations</a> ·
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section id="reservation">
+            <h2>Book a Table</h2>
+
+            <!--
+                Using method="post" since this form submits personal
+                booking details (name, contact info, date), which
+                should not be exposed in the URL.
+            -->
+            <form action="/reserve" method="post">
+
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" required>
+
+                <br><br>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+
+                <br><br>
+
+                <label for="guests">Number of Guests</label>
+                <input id="guests" name="guests" type="number" min="1" max="20" required>
+
+                <br><br>
+
+                <label for="date">Reservation Date</label>
+                <input id="date" name="date" type="date" required>
+
+                <br><br>
+
+                <button type="submit">Reserve</button>
+            </form>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <table>
+                <caption>Habesha Eatery menu with prices in ETB</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Dish</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price ETB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Doro Wat</td>
+                        <td>Spicy chicken stew served with injera</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Tibs</td>
+                        <td>Sautéed beef with onions and peppers</td>
+                        <td>320</td>
+                    </tr>
+                    <tr>
+                        <td>Shiro</td>
+                        <td>Ground chickpea stew, vegetarian</td>
+                        <td>220</td>
+                    </tr>
+                    <tr>
+                        <td>Kitfo</td>
+                        <td>Minced beef seasoned with spiced butter</td>
+                        <td>380</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <figure>
+                <img src="habesha-platter.jpg" alt="A large platter of injera topped with several traditional Ethiopian stews">
+                <figcaption>Our signature mixed platter</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Bole, Addis Ababa</p>
+    </footer>
+
+</body>
+</html>
