@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1 - Flexbox Navbar</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background-color: #7b3f00;
+            color: white;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-right button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: white;
+            color: #7b3f00;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Habesha Market</div>
+        <div class="nav-right">
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button>Sign In</button>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2 - Flexible Cards</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            background-color: #f0e6d6;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-row">
+        <div class="card">Coffee</div>
+        <div class="card">Spices</div>
+        <div class="card">Clothing</div>
+        <div class="card">Baskets</div>
+    </div>
+    <p style="margin-top: 20px;">
+        Resize the browser narrower to see the cards wrap onto new lines
+        because of flex-wrap, instead of shrinking forever.
+    </p>
+</body>
+</html>

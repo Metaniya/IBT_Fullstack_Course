@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4 - Grid Template Areas</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; }
+
+        .page {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #7b3f00;
+            color: white;
+            padding: 16px;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: #f0e6d6;
+            padding: 16px;
+        }
+
+        main {
+            grid-area: main;
+            padding: 16px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            padding: 16px;
+            text-align: center;
+        }
+
+        /* Collapse to a single column under 700px */
+        @media (max-width: 700px) {
+            .page {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

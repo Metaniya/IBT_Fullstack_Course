@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - Product Badge</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; padding: 40px; }
+
+        .product-card {
+            position: relative;
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #cc0000;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <span class="badge">ETB Sale</span>
+        <h2>Ethiopian Coffee Beans</h2>
+        <p>Freshly roasted, 500g bag</p>
+    </div>
+</body>
+</html>
