@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE Online Banking Dashboard (Rebuild)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="app-header">
+            <div class="navbar">
+                <div class="logo">CBE Online Banking</div>
+                <div class="nav-right">
+                    <span>Welcome, Abebe</span>
+                    <button>Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <ul class="sidebar-links">
+                <li>Dashboard</li>
+                <li>Transfer Money</li>
+                <li>Pay Bills</li>
+                <li>Statements</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Account Overview</h1>
+
+            <div class="stat-toolbar">
+                <div class="stat-card">
+                    <p class="stat-label">Checking Balance</p>
+                    <p class="stat-value">45,320 ETB</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Savings Balance</p>
+                    <p class="stat-value">120,500 ETB</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Pending Transfers</p>
+                    <p class="stat-value">2</p>
+                </div>
+            </div>
+
+            <h2>Recent Transactions</h2>
+            <div class="card-grid">
+                <div class="tx-card">
+                    <span class="tx-badge">New</span>
+                    <p class="tx-title">Grocery Payment</p>
+                    <p class="tx-amount">-450 ETB</p>
+                </div>
+                <div class="tx-card">
+                    <p class="tx-title">Salary Deposit</p>
+                    <p class="tx-amount">+15,000 ETB</p>
+                </div>
+                <div class="tx-card">
+                    <p class="tx-title">Electricity Bill</p>
+                    <p class="tx-amount">-820 ETB</p>
+                </div>
+                <div class="tx-card">
+                    <p class="tx-title">Transfer to Sara</p>
+                    <p class="tx-amount">-2,000 ETB</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2026 Commercial Bank of Ethiopia (rebuild demo)</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

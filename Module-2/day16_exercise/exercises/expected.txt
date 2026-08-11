@@ -1,0 +1,5 @@
+Bill: 450 ETB
+Tip (10%): 45.00 ETB
+Service fee (telebirr): 5 ETB
+Total: 500.00 ETB
+Each of 3 people pays: 166.67 ETB
