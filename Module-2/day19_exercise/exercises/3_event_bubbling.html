@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3 - Bubbling</title>
+    <style>
+        .wrapper {
+            padding: 20px;
+            background-color: #f0e6d6;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <button id="myBtn">Click Me</button>
+    </div>
+
+    <script>
+        const button = document.querySelector("#myBtn");
+        const wrapper = document.querySelector("#wrapper");
+
+        button.addEventListener("click", (e) => {
+            console.log("Button listener - event.target:", e.target);
+        });
+
+        wrapper.addEventListener("click", (e) => {
+            console.log("Wrapper listener - event.target:", e.target);
+        });
+
+        // Clicking the button logs both listeners, in this order:
+        // button listener first, then wrapper listener.
+        // This is bubbling - the click event starts at the button,
+        // then rises up through its ancestors, so the wrapper's
+        // listener also fires even though we only clicked the button.
+    </script>
+</body>
+</html>

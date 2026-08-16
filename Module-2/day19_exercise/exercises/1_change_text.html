@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1 - Select and Change Text</title>
+    <style>
+        .highlight {
+            color: #7b3f00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Original Title</h1>
+    <button id="changeBtn">Change Title</button>
+
+    <script>
+        const heading = document.querySelector("h1");
+        const button = document.querySelector("#changeBtn");
+
+        button.addEventListener("click", () => {
+            heading.textContent = "Habesha Market — Bole";
+            heading.classList.toggle("highlight");
+        });
+    </script>
+</body>
+</html>

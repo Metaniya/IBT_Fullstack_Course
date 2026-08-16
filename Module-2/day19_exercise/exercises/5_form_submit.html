@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - Form Submit</title>
+</head>
+<body>
+    <h1>Add an Item</h1>
+    <form id="addForm">
+        <input id="itemInput" type="text" placeholder="e.g. Teff">
+        <button type="submit">Add</button>
+    </form>
+    <ul id="itemList"></ul>
+
+    <script>
+        const form = document.querySelector("#addForm");
+        const input = document.querySelector("#itemInput");
+        const list = document.querySelector("#itemList");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const text = input.value.trim();
+            if (!text) return;
+
+            const li = document.createElement("li");
+            li.textContent = text;
+            list.append(li);
+
+            input.value = "";
+        });
+    </script>
+</body>
+</html>

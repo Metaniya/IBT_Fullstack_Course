@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4 - Delegated Delete</title>
+    <style>
+        li {
+            margin-bottom: 6px;
+        }
+        .del {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Items</h1>
+    <ul id="itemList">
+        <li>Teff <button class="del">x</button></li>
+        <li>Berbere <button class="del">x</button></li>
+        <li>Shiro <button class="del">x</button></li>
+    </ul>
+
+    <script>
+        const list = document.querySelector("#itemList");
+
+        // A single listener on the parent handles delete clicks
+        // for every current row, and any row added later too.
+        list.addEventListener("click", (e) => {
+            if (e.target.matches(".del")) {
+                e.target.closest("li").remove();
+            }
+        });
+    </script>
+</body>
+</html>
