@@ -1,6 +1,4 @@
-# Day 7 Mini Project - Bank Customer Service Simulator
 
-# Stack for transaction history - O(1) push and pop, supports "undo last transaction"
 class TransactionHistory:
     def __init__(self):
         self.history = []
@@ -21,7 +19,7 @@ class TransactionHistory:
                 print(transaction)
 
 
-# Dictionary for fast customer lookup by account number - O(1) average lookup
+
 customers = {
     "ACC001": {"name": "Abebe", "balance": 5000},
     "ACC002": {"name": "Sara", "balance": 3000},
