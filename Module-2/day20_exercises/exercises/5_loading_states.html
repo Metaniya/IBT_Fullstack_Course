@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 - Loading, Success, Error States</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        #result {
+            margin-top: 16px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            min-height: 40px;
+        }
+        .error {
+            color: #cc0000;
+        }
+        button {
+            padding: 8px 16px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch States Demo</h1>
+    <p>
+        Click "Load Data" with your network on to see the loading and
+        success states. Turn off wifi (or use dev tools to simulate
+        offline) and click again to see the error state.
+    </p>
+
+    <button id="loadBtn">Load Data</button>
+
+    <div id="result"></div>
+
+    <script>
+        const result = document.querySelector("#result");
+        const loadBtn = document.querySelector("#loadBtn");
+
+        async function loadData() {
+            // 1. Loading state
+            result.textContent = "Loading...";
+            result.classList.remove("error");
+
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/users/1");
+
+                if (!res.ok) {
+                    throw new Error(`Server responded with ${res.status}`);
+                }
+
+                const user = await res.json();
+
+                // 2. Success state
+                result.textContent = `Loaded: ${user.name} (${user.email})`;
+            } catch (err) {
+                // 3. Error state
+                result.textContent = "Could not load data. Check your connection and try again.";
+                result.classList.add("error");
+            }
+        }
+
+        loadBtn.addEventListener("click", loadData);
+    </script>
+</body>
+</html>
