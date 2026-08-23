@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habesha Market — Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Sign Up for Habesha Market Updates</h1>
+
+    <form id="signup-form">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="e.g. Almaz Tesfaye">
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="09xxxxxxxx or +2519xxxxxxxx">
+
+        <button type="submit">Sign Up</button>
+
+        <p id="error" class="error"></p>
+    </form>
+
+    <p id="signup-count"></p>
+
+    <h2>Signed Up So Far</h2>
+    <ul id="signup-list"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>

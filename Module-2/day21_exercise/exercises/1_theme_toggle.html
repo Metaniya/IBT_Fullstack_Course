@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1 - Theme Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        body.light {
+            background-color: #ffffff;
+            color: #222222;
+        }
+        body.dark {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body class="light">
+    <h1>Habesha Market</h1>
+
+    <label for="theme">Theme</label>
+    <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+
+    <script>
+        const themeSelect = document.querySelector("#theme");
+        const body = document.body;
+
+      
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            themeSelect.value = savedTheme;
+            body.className = savedTheme;
+        }
+
+       
+        themeSelect.addEventListener("change", () => {
+            const theme = themeSelect.value;
+            body.className = theme;
+            localStorage.setItem("theme", theme);
+        });
+    </script>
+</body>
+</html>
