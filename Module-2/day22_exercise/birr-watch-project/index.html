@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birr Watch — Live ETB Exchange Rates</title>
+    <link rel="stylesheet" href="birrwatch-styles.css">
+</head>
+<body>
+
+    <h1>Birr Watch</h1>
+    <p id="status"></p>
+
+    <form id="convert-form">
+        <label for="amount">Amount in ETB</label>
+        <input id="amount" type="number" value="100" min="0" step="0.01">
+
+        <label for="currency">Convert to</label>
+        <select id="currency"></select>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    <p id="result"></p>
+
+    <h2>Your Watchlist</h2>
+    <button id="add-to-watchlist">Add Selected Currency</button>
+    <ul id="watchlist"></ul>
+
+    <script src="birrwatch-app.js"></script>
+</body>
+</html>

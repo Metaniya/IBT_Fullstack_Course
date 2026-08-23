@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfaf5;
+    color: #222;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #7b3f00;
+}
+
+h2 {
+    color: #7b3f00;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+#status {
+    color: #666;
+    min-height: 1.2em;
+}
+
+#convert-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: white;
+    border: 1px solid #e0d6c8;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+input,
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #7b3f00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a2d00;
+}
+
+#result {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+#add-to-watchlist {
+    margin-bottom: 12px;
+}
+
+#watchlist {
+    list-style: none;
+}
+
+#watchlist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #e0d6c8;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+}
+
+.remove-btn {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+}
