@@ -1,0 +1,9 @@
+const dishes = [
+    { id: 1, name: "Doro Wat", price: 240, category: "Main", spicy: true },
+    { id: 2, name: "Shiro", price: 120, category: "Vegan", spicy: false },
+    { id: 3, name: "Tibs", price: 280, category: "Grill", spicy: true },
+    { id: 4, name: "Kitfo", price: 300, category: "Main", spicy: true },
+    { id: 5, name: "Gomen", price: 100, category: "Vegan", spicy: false },
+];
+
+export default dishes;
