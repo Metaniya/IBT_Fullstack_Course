@@ -1,0 +1,10 @@
+# Addis Eats — Routed
+
+## Routes
+- `/` — Landing page
+- `/menu` — Full menu, category filter in the query string
+- `/menu/:id` — Single dish detail page
+- `/cart` — Current order and total
+- `/login` — Sign in
+- `/checkout` — Delivery details (requires sign-in)
+- `*` — Not found
