@@ -1,0 +1,8 @@
+
+
+## Checkout validation rules
+- **name** — required, because delivery needs someone to ask for
+- **phone** — must match `09...`/`+2519...` (TeleBirr format), spaces stripped
+  before testing so people can type it however feels natural
+- **area** — always valid (a select can't hold a bad value)
+- **notes** — optional, never validated
