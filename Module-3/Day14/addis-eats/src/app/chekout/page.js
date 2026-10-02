@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import CheckoutForm from "./CheckoutForm";
 
 export default async function CheckoutPage() {
   // cookies() reads the request, so this line forces the route to be dynamic.
@@ -9,8 +10,11 @@ export default async function CheckoutPage() {
     <main className="p-8">
       <h1 className="text-2xl font-bold">Checkout</h1>
       <p className="mt-2">
-        {session ? "Welcome back." : "You are checking out as a guest."}
+        {session
+          ? `Signed in as ${session.value}.`
+          : "You are checking out as a guest."}
       </p>
+      <CheckoutForm />
     </main>
   );
 }
