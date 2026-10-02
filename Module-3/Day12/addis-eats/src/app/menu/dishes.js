@@ -5,6 +5,14 @@ export const dishes = [
   { id: "shiro", name: "Shiro", category: "Vegan", price: 180 },
 ];
 
-export function getDish(id) {
-  return dishes.find((d) => d.id === id) ?? null;
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+export async function getDishes() {
+  await wait(800); // pretend this is a slow database
+  return dishes;
+}
+
+export async function getDish(id) {
+  const all = await getDishes();
+  return all.find((d) => d.id === id) ?? null;
 }
