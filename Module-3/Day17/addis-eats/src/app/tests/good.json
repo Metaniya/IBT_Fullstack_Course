@@ -1,0 +1,9 @@
+{
+  "name": "Abel",
+  "phone": "0912345678",
+  "area": "Bole",
+  "lines": [
+    { "dishId": "kitfo", "quantity": 2 },
+    { "dishId": "shiro", "quantity": 1 }
+  ]
+}
